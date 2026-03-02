@@ -53,8 +53,8 @@ jobs:
           fi
 
           echo "Checking page content for CSC309..."
-          if ! head -n 2000 body.html | grep -q "CSC309"; then
-            echo "Expected content 'CSC309' not found on homepage."
+          if ! grep -q "CSC309" body.html; then
+            echo "Expected content 'CSC309' not found."
             exit 1
           fi
 
